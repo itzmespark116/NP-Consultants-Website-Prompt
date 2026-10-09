@@ -270,6 +270,7 @@
             ```
 - make a custom scrollbar that adapts to themes, etc.
 - Do not use numbers, etc for elements, instead use from :root to keep things consistent
+- For intro animations, do not implement it directly to the element. instead use wrappers
 
 ---
 ## JS
@@ -287,8 +288,15 @@
 
     ...
     ```
+- For every image, add a fallback from <kbd>/resources/img/placeholders/</kbd> depending on the type.
 
 ---
+
+## JSON
+- Do not include any sort of comments including the ehader, etc. (Only applies to .json file format)
+
+---
+
 ## HTML
 
 - When linking css, js, etc file, instead of doing back and forth paths, start from root everytime. Example
@@ -747,15 +755,66 @@
 ---
 
 ## Homepage &bull; Our Services
+- Data from <kbd>/resources/data/home-srevices.json</kbd>
+- Button linking to <kbd>/srevices/</kbd>
+
+---
+
+## Homepage &bull; Q&A 
+- use a card-style system with a glass effect.
+- x-axis scroll with snap
+- 3 cards on normal viewport (Laptop), single card on mobile
+- show a numbered navigation for user to navigate easily
+- add arrows to navigate thrugh too 
+- make the cards at edges slightly smaller, blurrier but readable & dynamic than the middle card
+- write the contents through <kbd>/resources/data/qna.json</kbd>
 
 ---
 
 ## Homepage &bull; Our Projects
-
+- use cards style of the [Homepage &bull; About Us](#homepage--about-us)
+- use the hover based information reveal system/module from [Homepage &bull; About Us](#homepage--about-us)
+- show the projects with the <kbd>featured: true;</kbd> in the <kbd>/resources/data/projects.json</kbd> file
+- Texts taken from the <bkd>/resources/data/home-projects.json</bkd>
+- the grid shows 3 projects at every viewport setting, can expand into 4 or 4+ at larger screens upto 6
+- if the display size doesn't make the grid show mroe than 3 projects, do not show the rest projects in this section
+- button linking to <kbd>/projects/</kbd>
 --- 
 
 ## Homepage &bull; Our Team
+- shows the roles - Manager, Director & Assistant directors and managers at the topmost row
+- the rest of the employees are shown in the rest of the lines.
+- shows the diector in the topmmost layer's leftmost, this can expand depending on the space available in the row
+- shows the manager, assistant managers, etc to the rightmost using a single cell of the grid.
+- if there is space left after showing the management, expand the director's cell to fill the grid in.
+- At mobile view, all the cells are foced to show row-wise, therefore show the management's profile pictures slightly larger than the employees profile pictures
+- data from <kbd>/resources/data/team.json</kbd>
 
 --- 
 
 ## Homepage  &bull; Contact Us
+- This is a reminder-style of a block, this has a tagline and a button linking to <kbd>/contact/</kbd>
+- has the top & bottom border images as <kbd>var(--splitter)</kbd> as given in the example code
+
+---
+
+## Our Services
+- Data from <kbd>/resources/data/srevices.json</kbd>
+- Use a blocwise system with a block per each service.
+
+---
+
+## Our Projects
+...
+
+---
+
+## Contact Us &bull; Map
+...
+
+---
+
+## Contact Us &bull; Form
+...
+
+---
