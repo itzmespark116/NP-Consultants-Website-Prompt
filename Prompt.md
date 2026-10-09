@@ -267,6 +267,7 @@
         - do the structure as
             ```
             LOGO BIG (grid:left)    Contact Info(grid:center)   NavLinks(grid:right)
+            [Copyright & etc lines at the bottom, all columns of the row 2]
             ```
 - make a custom scrollbar that adapts to themes, etc.
 - Do not use numbers, etc for elements, instead use from :root to keep things consistent
@@ -322,8 +323,10 @@
 - Prints the links through the `/resources/data/nav.json` file
     - The file includes every data in the nav. Example
         ```json
-        LinkName : LinkPath
-        Home    : /home/
+        {
+            "LinkName" : "LinkPath",
+            "Home"    : "/home/"
+        }
         ```
 - This is sticky to the top with `position: absolute` css - Not with `position: sticky` beacure the banner/hero starts from 0 and not below.
 - Use a glass effect as background.
@@ -370,7 +373,7 @@
     
     > NP Consultants is a structural design and engineering consultancy established in 2010, providing comprehensive solutions across Sri Lanka and extending its services to international projects. With expertise in structural design, structural detailing, architectural and interior design, project management, and electrical and mechanical consultancy, we serve a diverse range of projects, from residential buildings to industrial facilities and specialised structures. Our experienced team is committed to delivering practical, reliable, and cost-effective solutions tailored to each client's requirements, with a strong focus on quality, structural integrity, and client satisfaction.
 
-- apart from it use a grid to show the paragraph at left and a photo grid from `/resources/data/projects.json` which has the `show-in-about: true`
+- apart from it use a grid to show the paragraph at left and a photo grid from `/resources/data/projects.json` which has the `"show-in-about": true`
 - use the grid such as (example) : 
 
     ```html
@@ -774,8 +777,8 @@
 ## Homepage &bull; Our Projects
 - use cards style of the [Homepage &bull; About Us](#homepage--about-us)
 - use the hover based information reveal system/module from [Homepage &bull; About Us](#homepage--about-us)
-- show the projects with the `featured: true;` in the `/resources/data/projects.json` file
-- Texts taken from the `sss/resources/data/home-projects.json`
+- show the projects with the `"featured": true` in the `/resources/data/projects.json` file
+- Texts taken from the `/resources/data/home-projects.json`
 - the grid shows 3 projects at every viewport setting, can expand into 4 or 4+ at larger screens upto 6
 - if the display size doesn't make the grid show mroe than 3 projects, do not show the rest projects in this section
 - button linking to `/projects/`
@@ -816,8 +819,8 @@
 - in json, the basic stats are to be assigned using 
     ```json
     {
-        featured: true
-        ongoing: true
+        "featured": true,
+        "ongoing": true
     }
     ```
 
