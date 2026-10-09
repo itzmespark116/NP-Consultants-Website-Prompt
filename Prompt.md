@@ -130,7 +130,7 @@
             - `n-small`
             - `n-medium`
             - `n-large`
-        - example basic root.css file
+        - example basic `root.css` file
 
             ```css
             /* ──────────────────────────────────────────────────────────────────────────────── */
@@ -253,9 +253,9 @@
             }
             ```
 
-    - for body.css
+    - for `body.css`
         - include all the body related things.
-    - for nav.css
+    - for `nav.css`
         - include the nav, adaptive to wide and mobile viewports, adaptive to everything.
         - the menu icon should be animated smoothly between menu icon adn the close icon
         - the sturcture should be as followed
@@ -263,7 +263,7 @@
             LOGO(left)        Theme Button(Leaning to the links)    Menu Links/ Menu Icon(right)
             ```
         - the nav should be simple and clear and clean
-    - for footer.css
+    - for `footer.css`
         - do the structure as
             ```
             LOGO BIG (grid:left)    Contact Info(grid:center)   NavLinks(grid:right)
