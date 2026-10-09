@@ -106,30 +106,30 @@
 - keep the code minimalistic and systematc with the systematic file structure.
 - Use root.css to store color pallettes, font sizes, border-radius, transition ime, etc.
     - for root.css
-        - use :root, :root.light & :root.dark
-        - add the dark color palettes to the :root with the border-radius, etc.
+        - use `:root`, `:root.light` & `:root.dark`
+        - add the dark color palettes to the `:root` with the `border-radius`, etc.
         - instead of using seperate colors for gradients, use vars from the colors assigned earlier.
         - for colors use,
-            - --base
-            - --color
-            - --color-mute
-            - --background
-            - --accent
+            - `--base`
+            - `--color`
+            - `--color-mute`
+            - `--background`
+            - `--accent`
             - etc...
         - for font-sizes, (Try to use rem more often than others)
-            - font-large
-            - font-medium
-            - font-small
+            - `font-large`
+            - `font-medium`
+            - `font-small`
             - ...
         - for border-radius,
-            - border-radius-small
-            - border-radius-medium
-            - border-radius-large
+            - `border-radius-small`
+            - `border-radius-medium`
+            - `border-radius-large`
             - ...
         - for margins, gaps, paddings, etc, use (consider n as the element)
-            - n-small
-            - n-medium
-            - n-large
+            - `n-small`
+            - `n-medium`
+            - `n-large`
         - example basic root.css file
 
             ```css
@@ -288,7 +288,7 @@
 
     ...
     ```
-- For every image, add a fallback from <kbd>/resources/img/placeholders/</kbd> depending on the type.
+- For every image, add a fallback from `/resources/img/placeholders/` depending on the type.
 
 ---
 
@@ -310,7 +310,7 @@
     This applies to all file types such as css, js, html, img, etc.
 - Add redirection rules to the folder to prevent the users from seeing index.html in their url bars. Add this to the
 - Every text visible must be editable through .json in /resources/data/...
-- the root index.html will redirect the user to <kbd>/home/</kbd>
+- the root index.html will redirect the user to `/home/`
 
 
 ---
@@ -319,19 +319,19 @@
 
 ## Navigation Bar
 - Prints the links automatically and highlights the relevent page the user is in automatically.
-- Prints the links through the <kbd>/resources/data/nav.json</kbd> file
+- Prints the links through the `/resources/data/nav.json` file
     - The file includes every data in the nav. Example
         ```json
         LinkName : LinkPath
         Home    : /home/
         ```
-- This is sticky to the top with <kbd>position: absolute</kbd> css - Not with <kbd>position: sticky</kbd> beacure the banner/hero starts from 0 and not below.
+- This is sticky to the top with `position: absolute` css - Not with `position: sticky` beacure the banner/hero starts from 0 and not below.
 - Use a glass effect as background.
 
 ---
 
 ## Footer
-- Prints the contact info though <kbd>/resources/data/contact-info.json</kbd>
+- Prints the contact info though `/resources/data/contact-info.json`
     - data format example:
     ```json
     type: email
@@ -339,14 +339,14 @@
     text: email@domain.com
     action: mailto:email@domain.com
     ```
-- Prints the NavLinks through <kbd>/resources/data/nav.json</kbd>
+- Prints the NavLinks through `/resources/data/nav.json`
 
 ---
 
 ## Homepage &bull; Banner/Hero
 - Use the uploaded video.
-- include the file in <kbd>/resources/vid/</kbd>
-- add text with <kbd>position:absolute</kbd>
+- include the file in ` /resources/vid/`
+- add text with `position:absolute`
     ```html
     <div class="homepage-banner-content">
         <p class="homepage-banner-label">NP CONSULTANTS</p>
@@ -370,7 +370,7 @@
     
     > NP Consultants is a structural design and engineering consultancy established in 2010, providing comprehensive solutions across Sri Lanka and extending its services to international projects. With expertise in structural design, structural detailing, architectural and interior design, project management, and electrical and mechanical consultancy, we serve a diverse range of projects, from residential buildings to industrial facilities and specialised structures. Our experienced team is committed to delivering practical, reliable, and cost-effective solutions tailored to each client's requirements, with a strong focus on quality, structural integrity, and client satisfaction.
 
-- apart from it use a grid to show the paragraph at left and a photo grid from <kbd>/resources/data/projects.json</kbd> which has the <kbd>show-in-about: true</kbd>
+- apart from it use a grid to show the paragraph at left and a photo grid from `/resources/data/projects.json` which has the `show-in-about: true`
 - use the grid such as (example) : 
 
     ```html
@@ -755,8 +755,8 @@
 ---
 
 ## Homepage &bull; Our Services
-- Data from <kbd>/resources/data/home-srevices.json</kbd>
-- Button linking to <kbd>/srevices/</kbd>
+- Data from `/resources/data/home-srevices.json`
+- Button linking to `/srevices/`
 
 ---
 
@@ -767,18 +767,18 @@
 - show a numbered navigation for user to navigate easily
 - add arrows to navigate thrugh too 
 - make the cards at edges slightly smaller, blurrier but readable & dynamic than the middle card
-- write the contents through <kbd>/resources/data/qna.json</kbd>
+- write the contents through `/resources/data/qna.json`
 
 ---
 
 ## Homepage &bull; Our Projects
 - use cards style of the [Homepage &bull; About Us](#homepage--about-us)
 - use the hover based information reveal system/module from [Homepage &bull; About Us](#homepage--about-us)
-- show the projects with the <kbd>featured: true;</kbd> in the <kbd>/resources/data/projects.json</kbd> file
-- Texts taken from the <bkd>/resources/data/home-projects.json</bkd>
+- show the projects with the `featured: true;` in the `/resources/data/projects.json` file
+- Texts taken from the `sss/resources/data/home-projects.json`
 - the grid shows 3 projects at every viewport setting, can expand into 4 or 4+ at larger screens upto 6
 - if the display size doesn't make the grid show mroe than 3 projects, do not show the rest projects in this section
-- button linking to <kbd>/projects/</kbd>
+- button linking to `/projects/`
 --- 
 
 ## Homepage &bull; Our Team
@@ -788,33 +788,56 @@
 - shows the manager, assistant managers, etc to the rightmost using a single cell of the grid.
 - if there is space left after showing the management, expand the director's cell to fill the grid in.
 - At mobile view, all the cells are foced to show row-wise, therefore show the management's profile pictures slightly larger than the employees profile pictures
-- data from <kbd>/resources/data/team.json</kbd>
+- data from `/resources/data/team.json`
 
 --- 
 
 ## Homepage  &bull; Contact Us
-- This is a reminder-style of a block, this has a tagline and a button linking to <kbd>/contact/</kbd>
-- has the top & bottom border images as <kbd>var(--splitter)</kbd> as given in the example code
+- This is a reminder-style of a block, this has a tagline and a button linking to `/contact/`
+- has the top & bottom border images as `var(--splitter)` as given in the example code
 
 ---
 
 ## Our Services
-- Data from <kbd>/resources/data/srevices.json</kbd>
+- Data from `/resources/data/srevices.json`
 - Use a blocwise system with a block per each service.
+- scroll direction : y-axis
 
 ---
 
 ## Our Projects
-...
+- Data from `/resources/data/srevices.json`
+- A gridwise representation of projects usig cards.
+- cars show the Project name, project type & the project year with a related images swicthing randomly in a smooth manner.
+- show finished projects in an accent based color border
+- show the projects in progress in a amber based border
+- write the ongoing projects before the finished projects
+- when a project card is clicked, it opens a pop-up with its Topic(project Name), Project Type, Year, relevent images in a grid.
+- in json, the basic stats are to be assigned using 
+    ```json
+    featured: true
+    ongoing: true
+    ```
 
 ---
 
 ## Contact Us &bull; Map
-...
+- 100vw/ 100dvw map with around 80vh/80dvh - 100vh-100dvh depending on the viewoport
+- data from `/resources/data/contact.json`
 
 ---
 
 ## Contact Us &bull; Form
-...
+- Form information from `/resources/data/contact-form.json`
+- every field input is printed from .json
+- has a google-style form fields. Example CSS:
+
+    ```html
+    ...
+    ```
+
+    ```css
+    ...
+    ```
 
 ---
