@@ -1,0 +1,64 @@
+.homepage-grid-main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    width: 100%;
+}
+
+.homepage-grid-main p {
+    grid-column: 1 / 2;
+    width: 100%;
+    min-width: 0;
+}
+
+.homepage-grid-gallery {
+    grid-column: 2 / 3;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.homepage-grid-gallery .card {
+    min-width: 0;
+    border-radius: var(--border-radius-medium);
+}
+
+@media (max-width: 768px) {
+    .homepage-grid-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-grid-gallery {
+        grid-template-columns: none;
+        grid-auto-columns: 80%;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        overflow-y: hidden;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .homepage-grid-gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .homepage-grid-gallery > * {
+        scroll-snap-align: start;
+    }
+}
+
+
+/* --about-overlay-start   -> --overlay-start
+--about-overlay-mid     -> --overlay-mid
+--about-overlay-end     -> --overlay-end
+--about-card-shadow     -> --card-shadow
+--about-card-shadow-hover -> --card-shadow-hover
+--about-card-radius     -> --border-radius-small
+--about-title-color     -> --color-h2
+--about-text-color      -> --color
+--about-overlay-title   -> --color
+--about-overlay-desc    -> --color-mute
+--main-about-background -> --home-about-background */
