@@ -815,8 +815,10 @@
 - when a project card is clicked, it opens a pop-up with its Topic(project Name), Project Type, Year, relevent images in a grid.
 - in json, the basic stats are to be assigned using 
     ```json
-    featured: true
-    ongoing: true
+    {
+        featured: true
+        ongoing: true
+    }
     ```
 
 ---
